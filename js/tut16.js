@@ -1,0 +1,27 @@
+console.log("This is tut 16");
+let element = document.createElement("li");
+let text = document.createTextNode("I am a text Node");
+element.appendChild(text);
+//Add a className to the li elements
+element.className = "childul";
+element.id = "createdli";
+element.setAttribute("title", "myTitle");
+// element.innerText='<b>This is created By sharpsailor</b>';
+// element.innerHTML='<b>This is created By sharpsailor</b>';
+let ul = document.querySelector("ul.this");
+ul.appendChild(element);
+// console.log(ul);
+// console.log(element);
+let elem2 = document.createElement("h3");
+elem2.id = "elem2";
+elem2.className = "elem2";
+let tnode = document.createTextNode("This is a created node for elem2");
+elem2.appendChild(tnode);
+element.replaceWith(elem2);
+let myul = document.getElementById("myul");
+myul.replaceChild(element, document.getElementById("fui"));
+myul.removeChild(element, document.getElementById("lui"));
+// console.log(elem2);
+pr = elem2.getAttribute("id");
+elem2.setAttribute("title", "myelem2Title");
+console.log(elem2, pr);
